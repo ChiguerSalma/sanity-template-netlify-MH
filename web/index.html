@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/icons.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="css/flexslider.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="css/theme-velvet.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all"/>
+		<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav-container dark">
+        <nav class="nav-1 dark overlay fixed">
+		    <div class="navbar">
+			    <div class="container">
+					<div class="row">
+						<div class="logo-div" style="display: inline-block;float: left;">
+							<a href="https://moosaconsulting.com/facebook-ads-ecommerce">
+								<img class="logo" alt="Logo" src="img/White-logo-res.svg"   >
+							</a>
+						</div>
+					    <div class="col-md-3 text-right col-sm-6">
+							<a class="btn btn-filled" id="sec6"></a>
+							<div class="mobile-toggle">
+								<div class="upper"></div>
+								<div class="middle"></div>
+								<div class="lower"></div>
+							</div>
+						</div>
+							
+						<div id="menu" class="col-md-7 text-left col-sm-12 col-xs-12">
+							<ul class="menu">
+								<li class="has-dropdown">
+									<a id="sec1">
+									    
+									</a>
+								</li>
+								<li>
+								    <a id="sec2">
+										
+									</a>
+								</li>
+								<li>
+								    <a id="sec3">
+										
+									</a>
+								</li>
+								<li>	
+								    <a id="sec4">
+										
+									</a>
+								</li>
+								<a class="btn btn-filled mbl-only" href="#sec-6" >Get Started</a>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<section class="header header-1 fixed-header" >
+		<div class="background-image-holder">
+			<img alt="Background Image" class="background-image" src="img/business-meeting-at-business-lunch-in-cafe-3BGAF6J-optimized.jpg">
+		</div>
+		
+		<div class="container">
+			<div class="row v-align-children">
+				<div class="col-md-6">
+					<h4 class="text-white" style="font-size: 30px; " id="header-title"><br></h4>
+					<h5 class="text-white" style="font-family:lora; text-transform: inherit;" id="header-description"></h5>
+				</div>
+
+				<div class="col-md-6">
+					<div class="inner">
+						<ul>
+							<li>
+								<h4 class="text-white text-center" style="width:100%;" id="form-title">CONTACT US TODAY</h4>
+							</li>
+						</ul>
+						<form class="form-email" method="post" name="contactFormOne" data-success="Thanks for your submission, we will be in touch shortly." data-error="Please fill all fields correctly." success-redirect="thank-you.php">
+							<input type="text" name="name" class="signup-name-field validate-required"  id="name-field">
+							<input type="text" name="email" class="validate-required validate-email signup-email-field"  id="email-field">
+							<input type="number" name="phone" class="signup-name-field validate-required"  id="phone-field">
+							<input type="text" name="company-name" class="signup-name-field validate-required"  id="company-field">
+							<input type='hidden' name='form_name' value='form_header' />
+								<?php
+									if(isset($_GET['utm_content'])){
+										$utm_content = $_GET['utm_content'];
+									} else {
+										$utm_content = "";
+										
+									}
+									if(isset($_GET['utm_source'])){
+										$utm_source = $_GET['utm_source'];
+									} else {
+										$utm_source = "";
+										
+									}
+									if(isset($_GET['utm_campaign'])){
+										$utm_campaign = $_GET['utm_campaign'];
+									} else {
+										$utm_campaign = "";
+									}
+									if(isset($_GET['utm_medium'])){
+										$utm_medium = $_GET['utm_medium'];
+									} else {
+										$utm_medium = "";
+									}
+									if(isset($_GET['utm_term'])){
+										$utm_term = $_GET['utm_term'];
+									} else {
+										$utm_term = "";
+									}
+									
+									if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+										 $url = "https://";   
+									else  
+										 $url = "http://";   									    
+									
+									$url.= $_SERVER['HTTP_HOST'];   
+									$url.= $_SERVER['REQUEST_URI'];    									    
+
+									echo "
+										<input type='hidden' name='utm_content' value='"."$utm_content"."'"." />
+										<input type='hidden' name='utm_source' value='"."$utm_source"."'"." />
+										<input type='hidden' name='utm_campaign' value='"."$utm_campaign"."'"." />									
+										<input type='hidden' name='utm_medium' value='"."$utm_medium"."'"." />
+										<input type='hidden' name='utm_term' value='"."$utm_term"."'"." />
+										<input type='hidden' name='website_url' value='"."$url"."'"." />
+
+										; ?>
+								<input type="submit" name="SubmitUpper"  id="form-button">
+								<p class="sub" style="margin-bottom:0px;">
+									* We don’t share your personal info with anyone. Check out our <a href="https://moosaconsulting.com/privacy-policy/" target="_blank"> Privacy Policy</a> for more information.
+								</p>
+								<div class="form-error">
+									<span>Please fill all fields correctly</span>
+								</div>
+							
+								<div class="form-success">
+									<span>Thanks, your details were sent</span>
+								</div>
+								<iframe srcdoc="" class="mail-list-form">
+								</iframe>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</section>
+</body>
+</html>
