@@ -29,5 +29,7 @@
     "sanity-plugin-order-documents": "^0.0.22",
     "styled-components": "^5.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+  "@sanity/cli": "^1.150.1"
+  }
 }
