@@ -15,6 +15,7 @@ export default {
             name: 'order',
             type: 'number',
             title: 'order of display',
+            hidden: true,
         }
     ]
 }
